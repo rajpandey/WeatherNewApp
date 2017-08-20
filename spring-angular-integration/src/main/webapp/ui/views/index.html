@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>login</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<script src="js/plugins/jquery-2.2.1.min.js"></script>
+<script src="js/plugins/angular-1.4.9.min.js"></script>
+<script src="js/plugins/bootstrap.min.js"></script>
+
+<body ng-app="app" ng-controller="weatherController">
+
+	<div class="container">
+		<div class="row" style="margin-top:50px;">
+		
+			<div class="col-md-offset-2 col-md-4" style="border: 2px solid green;">
+				<h2 class="text-center">Get Current Weather </h2>
+				<form class="form-horizontal" style="margin-bottom: 10px;">
+					<fieldset>
+						 <label class="control-label" for="repeatSelect"> Repeat select: </label>
+						    <select name="repeatSelect" id="repeatSelect" ng-model="data.model" class="form-control" >
+						      <option ng-repeat="option in data.availableOptions" value="{{option.name}}">{{option.name}}</option>
+						    </select>
+						</fieldset>
+						
+						<div class="weatherDetCont" ng-show="isWeatheDeat"> 						
+  						<div class="weatherCls">
+  						<label class="weatherlabel">City  </label> {{weatherDetails.city}}
+  						</div>
+  						<div class="weatherCls">
+  						<label class="weatherlabel">Updated time </label>{{weatherDetails.updatedTime}}
+  						</div>
+  						<div class="weatherCls">
+  						<label class="weatherlabel">Weather  </label>{{weatherDetails.weather}}
+  						</div>
+  						<div class="weatherCls">
+  						<label class="weatherlabel">Temperature </label>{{weatherDetails.temperature}} C
+  						</div>
+  						<div class="weatherCls">
+  						<label class="weatherlabel"> Wind   </label>{{weatherDetails.wind}} km/h
+  						</div>
+  						<div> 
+				</form>
+			</div>
+		</div>
+
+	</div>
+
+	<script>var App = angular.module('app',[]);</script>
+	<script src="js/service/weatherService.js"></script>
+	<script src="js/controller/weatherController.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+
+
+body, .form-control{
+	font-size:12px!important;
+}
+
+.weatherCls
+{
+	border:1px solid #CFCFCF;
+	min-height: 40px;
+}
+.weatherlabel
+{
+    padding: 6px 55px 10px 11px;
+    border-right: 2px solid #CFCFCF;
+    width: 157px;
+}
+.weatherDetCont
+{
+	margin-top: 20px;
+    margin-bottom: 20px;
+}

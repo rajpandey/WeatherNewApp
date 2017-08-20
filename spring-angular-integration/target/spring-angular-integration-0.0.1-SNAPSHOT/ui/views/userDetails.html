@@ -1,0 +1,23 @@
+<div class="col-md-offset-2 col-md-7" style="border: 2px solid green">
+
+ <h2>User Details</h2>
+  
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="user in userDetails">
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+</div>
